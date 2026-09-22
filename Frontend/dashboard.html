@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — Legal Case &amp; Advocate Management System</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="topbar">
+  <a href="dashboard.html" class="brand">
+    CaseLedger
+    <span>Legal Case &amp; Advocate Management System</span>
+  </a>
+  <nav class="nav">
+    <a href="dashboard.html" class="active">Dashboard</a>
+    <a href="business-module.html">Cases</a>
+    <a href="profile.html">Advocates</a>
+    <a href="login.html">Sign out</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <!-- ============ PAGE TITLE ============ -->
+  <div class="page-head">
+    <h1>Good morning, Neha</h1>
+    <p>Here's what's happening with your cases today.</p>
+  </div>
+
+  <!-- ============ SUMMARY STATS ============ -->
+  <section class="stats">
+    <div class="stat">
+      <div class="num">5</div>
+      <div class="label">Total cases</div>
+    </div>
+    <div class="stat pending">
+      <div class="num">2</div>
+      <div class="label">Pending</div>
+    </div>
+    <div class="stat hearing">
+      <div class="num">2</div>
+      <div class="label">Ongoing</div>
+    </div>
+    <div class="stat closed">
+      <div class="num">1</div>
+      <div class="label">Closed</div>
+    </div>
+  </section>
+
+  <!-- ============ UPCOMING HEARINGS + RECENT CASES ============ -->
+  <section class="grid-2">
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Upcoming hearings</h2>
+        <a href="business-module.html">View all</a>
+      </div>
+
+      <div class="hearing-row">
+        <div class="date-chip"><div class="day">24</div><div class="mon">SEP</div></div>
+        <div class="hearing-info">
+          <div class="case-name">Sharma vs. Verma</div>
+          <div class="case-meta">District Court, Mathura · CS/041/2025</div>
+        </div>
+      </div>
+
+      <div class="hearing-row">
+        <div class="date-chip"><div class="day">29</div><div class="mon">SEP</div></div>
+        <div class="hearing-info">
+          <div class="case-name">Bansal vs. Mathura Nagar Nigam</div>
+          <div class="case-meta">District Court, Mathura · CS/052/2026</div>
+        </div>
+      </div>
+
+      <div class="hearing-row">
+        <div class="date-chip"><div class="day">02</div><div class="mon">OCT</div></div>
+        <div class="hearing-info">
+          <div class="case-name">State vs. Anil Kumar</div>
+          <div class="case-meta">Sessions Court, Agra · CRL/118/2025</div>
+        </div>
+      </div>
+
+      <div class="hearing-row">
+        <div class="date-chip"><div class="day">11</div><div class="mon">OCT</div></div>
+        <div class="hearing-info">
+          <div class="case-name">Singh vs. Singh</div>
+          <div class="case-meta">Family Court, Mathura · MAT/019/2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Recent cases</h2>
+        <a href="business-module.html">View all</a>
+      </div>
+
+      <div class="case-row">
+        <div>
+          <div class="case-name">Sharma vs. Verma</div>
+          <div class="case-meta">Rakesh Sharma</div>
+        </div>
+        <span class="badge pending">Pending</span>
+      </div>
+
+      <div class="case-row">
+        <div>
+          <div class="case-name">State vs. Anil Kumar</div>
+          <div class="case-meta">Anil Kumar</div>
+        </div>
+        <span class="badge ongoing">Ongoing</span>
+      </div>
+
+      <div class="case-row">
+        <div>
+          <div class="case-name">Gupta Traders vs. Yadav Logistics</div>
+          <div class="case-meta">Mohit Gupta</div>
+        </div>
+        <span class="badge closed">Closed</span>
+      </div>
+
+      <div class="case-row">
+        <div>
+          <div class="case-name">Singh vs. Singh</div>
+          <div class="case-meta">Priya Singh</div>
+        </div>
+        <span class="badge ongoing">Ongoing</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============ QUICK ACTIONS ============ -->
+  <section class="actions">
+    <a href="business-module.html" class="action-card">
+      <div class="icon">+</div>
+      <h3>Add a new case</h3>
+      <p>Register a case and assign it to an advocate.</p>
+    </a>
+
+    <a href="profile.html" class="action-card">
+      <div class="icon">A</div>
+      <h3>Update advocate profile</h3>
+      <p>Edit contact details and specialization.</p>
+    </a>
+
+    <a href="business-module.html" class="action-card">
+      <div class="icon">⏱</div>
+      <h3>Check hearing schedule</h3>
+      <p>See every upcoming hearing this month.</p>
+    </a>
+  </section>
+
+  <footer>
+    Dashboard — Legal Case &amp; Advocate Management System, GLA University, Mathura.
+  </footer>
+
+</div>
+
+</body>
+</html>

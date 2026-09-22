@@ -1,0 +1,321 @@
+:root{
+  --navy:       #000080;
+  --navy-dark:  #00005C;
+  --navy-tint:  #E7E7F5;
+  --ink:        #1A1A1A;
+  --ink-soft:   #5B5B5B;
+  --paper:      #F5F5F5;
+  --card:       #FFFFFF;
+  --border:     #E2E2E2;
+  --oxblood:    #A23B3B;
+  --green:      #2F7A4F;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Karla', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+h1, h2{
+  margin: 0;
+  font-family: 'Spectral', Georgia, serif;
+  font-weight: 600;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.topbar{
+  background: var(--navy);
+  color: #EFEDE4;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 3px solid var(--navy);
+}
+
+.brand{
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.brand:hover{
+  color: var(--navy-tint);
+}
+
+.brand span{
+  display: block;
+  font-family: 'Karla', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #A9BBA9;
+}
+
+.nav a{
+  color: #C6D2C9;
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover{ color: #FFFFFF; }
+
+.nav a.active{
+  color: #FFFFFF;
+  border-bottom-color: var(--navy);
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.wrap{
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 30px 24px 60px 24px;
+}
+
+.page-head{ margin-bottom: 24px; }
+
+.page-head h1{ font-size: 27px; }
+
+.page-head p{
+  margin: 6px 0 0 0;
+  color: var(--ink-soft);
+}
+
+/* ============================================================
+   STAT CARDS - left accent bar instead of rounded shadow kit
+   ============================================================ */
+.stats{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.stat{
+  flex: 1 1 200px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--navy);
+  padding: 16px 18px;
+}
+
+.stat .num{
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.stat .label{
+  color: var(--ink-soft);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.stat.pending{ border-left-color: var(--oxblood); }
+.stat.pending .num{ color: var(--oxblood); }
+.stat.hearing{ border-left-color: var(--navy); }
+.stat.hearing .num{ color: var(--navy); }
+.stat.closed{ border-left-color: var(--green); }
+.stat.closed .num{ color: var(--green); }
+
+/* ============================================================
+   TWO COLUMN SECTION
+   ============================================================ */
+.grid-2{
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 800px){
+  .grid-2{ grid-template-columns: 1fr; }
+}
+
+.panel{
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 20px 22px;
+}
+
+.panel-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.panel-head h2{ font-size: 17px; }
+
+.panel-head a{
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.panel-head a:hover{ text-decoration: underline; }
+
+/* ---------- hearing list rows ---------- */
+.hearing-row{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #EFEEE4;
+}
+
+.hearing-row:last-child{ border-bottom: none; }
+
+.date-chip{
+  flex-shrink: 0;
+  width: 50px;
+  text-align: center;
+  background: var(--navy-tint);
+  border-radius: 2px;
+  padding: 6px 0;
+}
+
+.date-chip .day{
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+
+.date-chip .mon{
+  font-size: 10.5px;
+  color: var(--navy);
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.hearing-info .case-name{
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.hearing-info .case-meta{
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  margin-top: 2px;
+}
+
+/* ---------- recent case rows ---------- */
+.case-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid #EFEEE4;
+}
+
+.case-row:last-child{ border-bottom: none; }
+
+.case-row .case-name{
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.case-row .case-meta{
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  margin-top: 2px;
+}
+
+.badge{
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 11px;
+  border-radius: 20px;
+  border: 1px solid;
+  flex-shrink: 0;
+}
+
+.badge.pending{ color: var(--oxblood); border-color: #E3C2C6; background: #FBF1F2; }
+.badge.ongoing{ color: var(--navy);   border-color: #E6D8B4; background: #FBF7EA; }
+.badge.closed{  color: var(--green);   border-color: #BFD8CB; background: #F0F7F3; }
+
+/* ============================================================
+   QUICK ACTIONS
+   ============================================================ */
+.actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.action-card{
+  flex: 1 1 220px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 20px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.action-card:hover{ border-color: var(--navy); }
+
+.action-card .icon{
+  width: 36px;
+  height: 36px;
+  border-radius: 2px;
+  background: var(--navy-tint);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-family: 'Spectral', Georgia, serif;
+}
+
+.action-card h3{
+  margin: 0 0 4px 0;
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.action-card p{
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+footer{
+  margin-top: 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+@media (max-width: 600px){
+  .page-head h1{ font-size: 22px; }
+  .nav a{ margin-left: 14px; }
+}

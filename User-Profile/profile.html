@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Advocate Profile — Legal Case &amp; Advocate Management System</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="topbar">
+  <a href="dashboard.html" class="brand">
+    CaseLedger
+    <span>Legal Case &amp; Advocate Management System</span>
+  </a>
+  <nav class="nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="business-module.html">Cases</a>
+    <a href="profile.html" class="active">Advocates</a>
+    <a href="login.html">Sign out</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <!-- ============ PAGE TITLE ============ -->
+  <div class="page-head">
+    <h1>Advocate Profile</h1>
+    <p>Personal details, specialization and contact information.</p>
+  </div>
+
+  <!-- ============ PROFILE SUMMARY CARD ============ -->
+  <div class="profile-card">
+    <div class="avatar">NC</div>
+    <div class="profile-summary">
+      <h2>Neha Chauhan</h2>
+      <div class="role">Civil &amp; Commercial Law Advocate</div>
+      <div class="meta">Bar Registration No. UP/2014/4821 · 8 years of practice</div>
+    </div>
+    <div class="status-chip"><span class="dot"></span> Active</div>
+  </div>
+
+  <div class="grid-2">
+
+    <!-- ============ LEFT: EDITABLE DETAILS ============ -->
+    <div class="panel">
+      <h2>Contact &amp; practice details</h2>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="fName">Full name</label>
+          <input type="text" id="fName" value="Neha Chauhan">
+        </div>
+        <div class="field">
+          <label for="fBar">Bar registration no.</label>
+          <input type="text" id="fBar" value="UP/2014/4821">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="fEmail">Email address</label>
+          <input type="email" id="fEmail" value="neha.chauhan@lexfile.in">
+        </div>
+        <div class="field">
+          <label for="fPhone">Phone number</label>
+          <input type="tel" id="fPhone" value="+91 98765 43210">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="fSpec">Specialization</label>
+          <select id="fSpec">
+            <option>Civil &amp; Commercial Law</option>
+            <option>Criminal Law</option>
+            <option>Family Law</option>
+            <option>Corporate Law</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fCourt">Primary court</label>
+          <input type="text" id="fCourt" value="District Court, Mathura">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field" style="flex-basis: 100%;">
+          <label for="fBio">Short bio</label>
+          <textarea id="fBio">Handles civil and commercial disputes with a focus on contract and property matters. Based in Mathura, working with clients across Uttar Pradesh.</textarea>
+        </div>
+      </div>
+
+      <button class="btn" type="button">Save changes</button>
+      <button class="btn light" type="button">Cancel</button>
+    </div>
+
+    <!-- ============ RIGHT: SUMMARY + SPECIALIZATIONS ============ -->
+    <div>
+      <div class="panel">
+        <h2>Caseload summary</h2>
+        <div class="mini-stat"><span>Total cases</span><span class="num">5</span></div>
+        <div class="mini-stat"><span>Pending</span><span class="num">2</span></div>
+        <div class="mini-stat"><span>Ongoing</span><span class="num">2</span></div>
+        <div class="mini-stat"><span>Closed</span><span class="num">1</span></div>
+      </div>
+
+      <div class="panel">
+        <h2>Practice areas</h2>
+        <div class="tag-list">
+          <span class="tag-pill">Civil Law</span>
+          <span class="tag-pill">Contract Disputes</span>
+          <span class="tag-pill">Property Law</span>
+          <span class="tag-pill">Commercial Litigation</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Advocate profile — Legal Case &amp; Advocate Management System, GLA University, Mathura.
+  </footer>
+
+</div>
+
+</body>
+</html>

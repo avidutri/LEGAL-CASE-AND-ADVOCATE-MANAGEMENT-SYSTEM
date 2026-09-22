@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Management — Legal Case &amp; Advocate Management System</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="business-module.css">
+</head>
+
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="topbar">
+  <a href="dashboard.html" class="brand">
+    CaseLedger
+    <span>Legal Case &amp; Advocate Management System</span>
+  </a>
+  <nav class="nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="business-module.html" class="active">Cases</a>
+    <a href="profile.html">Advocates</a>
+    <a href="login.html">Sign out</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <!-- ============ PAGE TITLE ============ -->
+  <div class="page-head">
+    <h1>Case Management</h1>
+    <p>All cases handled by the firm, with their current status and next hearing date.</p>
+  </div>
+
+  <!-- ============ SUMMARY BOXES ============ -->
+  <section class="stats">
+    <div class="stat">
+      <div class="num">5</div>
+      <div class="label">Total cases</div>
+    </div>
+    <div class="stat pending">
+      <div class="num">2</div>
+      <div class="label">Pending</div>
+    </div>
+    <div class="stat hearing">
+      <div class="num">2</div>
+      <div class="label">Ongoing</div>
+    </div>
+    <div class="stat closed">
+      <div class="num">1</div>
+      <div class="label">Closed</div>
+    </div>
+  </section>
+
+  <!-- ============ ADD CASE FORM ============ -->
+  <section class="form-box">
+    <h2>New case</h2>
+    <p class="hint">Fill in the case details to register a new case.</p>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="fCaseNo">Case number</label>
+        <input type="text" id="fCaseNo" placeholder="CS/108/2026">
+      </div>
+      <div class="field">
+        <label for="fTitle">Case title</label>
+        <input type="text" id="fTitle" placeholder="Sharma vs. Verma">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="fClient">Client name</label>
+        <input type="text" id="fClient" placeholder="Rakesh Sharma">
+      </div>
+      <div class="field">
+        <label for="fCourt">Court</label>
+        <input type="text" id="fCourt" placeholder="District Court, Mathura">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="fAdvocate">Advocate in charge</label>
+        <input type="text" id="fAdvocate" placeholder="Adv. Neha Chauhan">
+      </div>
+      <div class="field">
+        <label for="fDate">Next hearing</label>
+        <input type="date" id="fDate">
+      </div>
+      <div class="field">
+        <label for="fStatus">Status</label>
+        <select id="fStatus">
+          <option value="pending">Pending</option>
+          <option value="ongoing">Ongoing</option>
+          <option value="closed">Closed</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="btn" type="button">Save case</button>
+    <button class="btn light" type="button">Cancel</button>
+  </section>
+
+  <!-- ============ SEARCH + FILTER ============ -->
+  <div class="toolbar">
+    <input type="text" id="searchBox" placeholder="Search by case number, title or client">
+
+    <select id="statusFilter">
+      <option value="all">All status</option>
+      <option value="pending">Pending</option>
+      <option value="ongoing">Ongoing</option>
+      <option value="closed">Closed</option>
+    </select>
+
+    <button class="btn" type="button">Add case</button>
+  </div>
+
+  <!-- ============ CASE TABLE ============ -->
+  <div class="table-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th>Client</th>
+          <th>Advocate</th>
+          <th>Next hearing</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>
+            <span class="case-no">CS/041/2025</span>
+            <span class="case-title">Sharma vs. Verma</span>
+            <span class="case-court">District Court, Mathura</span>
+          </td>
+          <td>Rakesh Sharma</td>
+          <td>Adv. Neha Chauhan</td>
+          <td>24 Sep 2026</td>
+          <td><span class="badge pending">Pending</span></td>
+          <td><a href="#" class="link-btn">Remove</a></td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="case-no">CRL/118/2025</span>
+            <span class="case-title">State vs. Anil Kumar</span>
+            <span class="case-court">Sessions Court, Agra</span>
+          </td>
+          <td>Anil Kumar</td>
+          <td>Adv. Deepak Prasad</td>
+          <td>02 Oct 2026</td>
+          <td><span class="badge ongoing">Ongoing</span></td>
+          <td><a href="#" class="link-btn">Remove</a></td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="case-no">CIV/077/2024</span>
+            <span class="case-title">Gupta Traders vs. Yadav Logistics</span>
+            <span class="case-court">Commercial Court, Mathura</span>
+          </td>
+          <td>Mohit Gupta</td>
+          <td>Adv. Neha Chauhan</td>
+          <td>—</td>
+          <td><span class="badge closed">Closed</span></td>
+          <td><a href="#" class="link-btn">Remove</a></td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="case-no">MAT/019/2026</span>
+            <span class="case-title">Singh vs. Singh</span>
+            <span class="case-court">Family Court, Mathura</span>
+          </td>
+          <td>Priya Singh</td>
+          <td>Adv. Rohit Malhotra</td>
+          <td>11 Oct 2026</td>
+          <td><span class="badge ongoing">Ongoing</span></td>
+          <td><a href="#" class="link-btn">Remove</a></td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="case-no">CS/052/2026</span>
+            <span class="case-title">Bansal vs. Mathura Nagar Nigam</span>
+            <span class="case-court">District Court, Mathura</span>
+          </td>
+          <td>Sunil Bansal</td>
+          <td>Adv. Deepak Prasad</td>
+          <td>29 Sep 2026</td>
+          <td><span class="badge pending">Pending</span></td>
+          <td><a href="#" class="link-btn">Remove</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    Case Management module — Legal Case &amp; Advocate Management System, GLA University, Mathura.
+  </footer>
+
+</div>
+
+</body>
+</html>

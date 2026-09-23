@@ -1,0 +1,293 @@
+:root{
+  --navy:       #000080;
+  --navy-dark:  #00005C;
+  --navy-tint:  #E7E7F5;
+  --ink:        #1A1A1A;
+  --ink-soft:   #5B5B5B;
+  --paper:      #F5F5F5;
+  --card:       #FFFFFF;
+  --border:     #E2E2E2;
+  --green:      #2F7A4F;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Karla', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+h1, h2{
+  margin: 0;
+  font-family: 'Spectral', Georgia, serif;
+  font-weight: 600;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.topbar{
+  background: var(--navy);
+  color: #EFEDE4;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 3px solid var(--navy);
+}
+
+.brand{
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.brand:hover{
+  color: var(--navy-tint);
+}
+
+.brand span{
+  display: block;
+  font-family: 'Karla', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #A9BBA9;
+}
+
+.nav a{
+  color: #C6D2C9;
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover{ color: #FFFFFF; }
+
+.nav a.active{
+  color: #FFFFFF;
+  border-bottom-color: var(--navy);
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.wrap{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 30px 24px 60px 24px;
+}
+
+.page-head{ margin-bottom: 24px; }
+
+.page-head h1{ font-size: 27px; }
+
+.page-head p{
+  margin: 6px 0 0 0;
+  color: var(--ink-soft);
+}
+
+/* ============================================================
+   PROFILE HEADER CARD
+   ============================================================ */
+.profile-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--navy);
+  padding: 26px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.avatar{
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #EFEDE4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.profile-summary h2{ font-size: 20px; }
+
+.profile-summary .role{
+  color: var(--navy);
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.profile-summary .meta{
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  margin-top: 8px;
+}
+
+.status-chip{
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--green);
+  background: #F0F7F3;
+  border: 1px solid #BFD8CB;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.status-chip .dot{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+/* ============================================================
+   TWO COLUMN
+   ============================================================ */
+.grid-2{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 800px){
+  .grid-2{ grid-template-columns: 1fr; }
+}
+
+.panel{
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 22px 24px;
+  margin-bottom: 20px;
+}
+
+.panel h2{ font-size: 17px; margin-bottom: 16px; }
+
+.field-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.field{
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label{
+  font-size: 13px;
+  font-weight: 600;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select, textarea{
+  font-family: 'Karla', Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: #FBFAF6;
+  color: var(--ink);
+}
+
+textarea{ resize: vertical; min-height: 80px; }
+
+input:focus, select:focus, textarea:focus{
+  outline: none;
+  border-color: var(--navy);
+  background: #FFFFFF;
+}
+
+.btn{
+  font-family: 'Karla', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  background: var(--navy);
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn:hover{ background: var(--navy-dark); }
+
+.btn.light{
+  background: #FFFFFF;
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
+.btn.light:hover{ background: var(--navy-tint); }
+
+/* ---------- small stat list ---------- */
+.mini-stat{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 0;
+  border-bottom: 1px solid #EFEEE4;
+  font-size: 14px;
+}
+
+.mini-stat:last-child{ border-bottom: none; }
+
+.mini-stat .num{
+  font-family: 'Spectral', Georgia, serif;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.tag-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.tag-pill{
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--navy);
+  background: var(--navy-tint);
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+footer{
+  margin-top: 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+@media (max-width: 600px){
+  .page-head h1{ font-size: 22px; }
+  .nav a{ margin-left: 14px; }
+}

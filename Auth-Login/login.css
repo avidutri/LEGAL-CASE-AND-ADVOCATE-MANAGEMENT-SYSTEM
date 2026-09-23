@@ -1,0 +1,292 @@
+/* ============================================================
+   COLORS - navy blue + light grey + white cards.
+   Team ke reference design se match kiya gaya navy blue theme.
+   ============================================================ */
+:root{
+  --navy:       #000080;
+  --navy-dark:  #00005C;
+  --navy-tint:  #E7E7F5;
+  --ink:        #1A1A1A;
+  --ink-soft:   #5B5B5B;
+  --paper:      #F5F5F5;
+  --card:       #FFFFFF;
+  --border:     #E2E2E2;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Karla', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 24px;
+}
+
+h1, h2{
+  margin: 0;
+  font-family: 'Spectral', Georgia, serif;
+  font-weight: 600;
+}
+
+/* ============================================================
+   AUTH CARD
+   ============================================================ */
+.auth-card{
+  display: flex;
+  max-width: 960px;
+  width: 100%;
+  background: var(--card);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(21, 48, 41, 0.14);
+  border: 1px solid var(--border);
+}
+
+/* ---------- LEFT PANEL ---------- */
+.info-panel{
+  flex: 1 1 360px;
+  background: var(--navy);
+  color: #EFEDE4;
+  padding: 48px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  position: relative;
+}
+
+.info-panel::before{
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--navy);
+}
+
+.tag{
+  align-self: flex-start;
+  border: 1px solid rgba(239,237,228,0.35);
+  padding: 5px 14px;
+  border-radius: 3px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: #D8CFA9;
+}
+
+.info-panel h1{
+  font-size: 27px;
+  line-height: 1.3;
+}
+
+.info-panel p{
+  margin: 0;
+  color: #C6D2C9;
+  max-width: 34ch;
+}
+
+.perks{
+  list-style: none;
+  margin: 6px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid rgba(239,237,228,0.18);
+  padding-top: 20px;
+}
+
+.perks li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.tick{
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid var(--navy);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+/* ---------- RIGHT PANEL (form) ---------- */
+.form-panel{
+  flex: 1 1 380px;
+  padding: 46px 42px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs{
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 26px;
+}
+
+.tabs a{
+  padding: 10px 4px;
+  margin-right: 26px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--ink-soft);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.tabs a.active{
+  color: var(--navy);
+  border-bottom-color: var(--navy);
+}
+
+.form-panel h2{ font-size: 21px; }
+
+.form-panel .sub{
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  margin: 4px 0 22px 0;
+}
+
+.field{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.field label{
+  font-size: 13px;
+  font-weight: 600;
+}
+
+input[type="email"], input[type="password"], input[type="text"]{
+  font-family: 'Karla', Arial, sans-serif;
+  font-size: 14px;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: #FBFAF6;
+  color: var(--ink);
+}
+
+input::placeholder{ color: #9CA69C; }
+
+input:focus{
+  outline: none;
+  border-color: var(--navy);
+  background: #FFFFFF;
+}
+
+.row-between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13.5px;
+  margin-bottom: 20px;
+}
+
+.remember{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-soft);
+}
+
+.row-between a{
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.row-between a:hover{ text-decoration: underline; }
+
+.btn-primary{
+  width: 100%;
+  padding: 13px 0;
+  background: var(--navy);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Karla', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary:hover{ background: var(--navy-dark); }
+
+.divider{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  margin: 22px 0;
+}
+
+.divider::before, .divider::after{
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.oauth{
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.oauth-btn{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 0;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: #FFFFFF;
+  color: var(--ink);
+  font-family: 'Karla', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+.oauth-btn:hover{ background: var(--navy-tint); }
+
+.foot-line{
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+
+.foot-line a{
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.foot-line a:hover{ text-decoration: underline; }
+
+@media (max-width: 760px){
+  .auth-card{ flex-direction: column; }
+  .info-panel{ padding: 36px 28px; }
+  .form-panel{ padding: 32px 28px; }
+}
